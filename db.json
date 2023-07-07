@@ -1,0 +1,166 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": " ",
+      "email": " ",
+      "password": " ",
+      "age": ""
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "Photo": "static_pictures/rengoku_1.jpg",
+      "Name": "Rengoku",
+      "Price": 75,
+      "status": "available",
+      "Details": "Link",
+      "size": "70x40cm",
+      "From": "Demon slayer",
+      "Materials": "Wood",
+      "Pictures": [
+        "static_pictures/rengoku_1.jpg",
+        "static_pictures/rengoku_2.jpg",
+        "static_pictures/rengoku_3.jpg"
+      ],
+      "Description": "Rengoku - 3D Wooden Panel inspired by popular Anime 'Demon slayer'.\nCrafted from high-quality natural wood, this panel is made with a keen attention\nto detail and a passion for the Anime lover world. On our site each and every panel is expertly carved to create\na stunning 3D effect, bringing the Anime characters to life in a whole new way."
+    },
+    {
+      "id": 2,
+      "Photo": "static_pictures/aki1.jpg",
+      "Name": "Aki Hayakawa and The Fox Devil",
+      "Price": 55,
+      "status": "available",
+      "Details": "Link",
+      "size": "40x50cm",
+      "From": "Chainsaw man",
+      "Materials": "Wood",
+      "Pictures": [
+        "static_pictures/aki1.jpg",
+        "static_pictures/aki2.jpg",
+        "static_pictures/aki3.jpg"
+      ],
+      "Description": "Aki Hayakawa and The Fox Devil - 3D Wooden Panel inspired by popular Anime 'Chainsaw man'.\nCrafted from high-quality natural wood, this panel is made with a keen attention\nto detail and a passion for the Anime lover world. On our site each and every panel is expertly carved to create\na stunning 3D effect, bringing the Anime characters to life in a whole new way."
+    },
+    {
+      "id": 3,
+      "Photo": "static_pictures/eren1.jpg",
+      "Name": "Eren Jager",
+      "Price": 55,
+      "status": "available",
+      "Details": "Link",
+      "size": "40x50cm",
+      "From": "Attack On TiTan",
+      "Materials": "Wood",
+      "Pictures": [
+        "static_pictures/eren1.jpg",
+        "static_pictures/eren2.jpg",
+        "static_pictures/eren3.jpg"
+      ],
+      "Description": "Eren Jager - Wooden 3D panel inspired by popular Anime 'Attack on Titan, AKA AOT'.\nCrafted from high-quality natural wood, this panel is made with a keen attention\nto detail and a passion for the Anime lover world. On our site each and every panel is expertly carved to create\na stunning 3D effect, bringing the Anime characters to life in a whole new way."
+    },
+    {
+      "id": 4,
+      "Photo": "static_pictures/gojo1.jpg",
+      "Name": "Saturo Gojo",
+      "Price": 55,
+      "status": "not available",
+      "Details": "Link",
+      "size": "50x36cm",
+      "From": "Jujutsu Kaisen",
+      "Materials": "Wood",
+      "Pictures": [
+        "static_pictures/gojo1.jpg",
+        "static_pictures/gojo2.jpg",
+        "static_pictures/gojo3.jpg"
+      ],
+      "Description": "Saturo Gojo - Wooden 3D panel inspired by popular Anime 'Jujutsu Kaisen'.\nCrafted from high-quality natural wood, this panel is made with a keen attention\nto detail and a passion for the Anime lover world. On our site each and every panel is expertly carved to create\na stunning 3D effect, bringing the Anime characters to life in a whole new way."
+    },
+    {
+      "id": 5,
+      "Photo": "static_pictures/zoro1.jpg",
+      "Name": "Zoro & Luffy",
+      "Price": 55,
+      "status": "not available",
+      "Details": "Link",
+      "size": "50x36cm",
+      "From": "One piece",
+      "Materials": "Wood",
+      "Pictures": [
+        "static_pictures/zoro1.jpg",
+        "static_pictures/zoro2.jpg",
+        "static_pictures/zoro3.jpg"
+      ],
+      "Description": "Zoro & Luffy - Wooden 3D panel inspired by popular Anime 'One Piece'.\nCrafted from high-quality natural wood, this panel is made with a keen attention\nto detail and a passion for the Anime lover world. On our site each and every panel is expertly carved to create\na stunning 3D effect, bringing the Anime characters to life in a whole new way."
+    },
+    {
+      "id": 6,
+      "Photo": "static_pictures/rengoku1.jpg",
+      "Name": "Rengoku & Tengen",
+      "Price": 65,
+      "status": "not available",
+      "Details": "Link",
+      "size": "30x70cm",
+      "From": "Demon slayer",
+      "Materials": "Wood",
+      "Pictures": [
+        "static_pictures/rengoku1.jpg",
+        "static_pictures/rengoku2.jpg",
+        "static_pictures/rengoku3.jpg"
+      ],
+      "Description": "Rengoku & Tengen - Wooden 3D panel inspired by popular Anime 'Demon Slayer'.\nCrafted from high-quality natural wood, this panel is made with a keen attention\nto detail and a passion for the Anime lover world. On our site each and every panel is expertly carved to create\na stunning 3D effect, bringing the Anime characters to life in a whole new way."
+    },
+    {
+      "id": 7,
+      "Photo": "static_pictures/saturo1.jpg",
+      "Name": "Satoru Gojo Vs Toji Fushiguro",
+      "Price": 85,
+      "status": "available",
+      "Details": "Link",
+      "size": "60x70cm",
+      "From": "Jujutsu Kaisen",
+      "Materials": "Wood",
+      "Pictures": [
+        "static_pictures/saturo1.jpg",
+        "static_pictures/saturo2.jpg",
+        "static_pictures/saturo3.jpg"
+      ],
+      "Description": "Satoru Gojo Vs Toji Fushiguro - Wooden 3D panel inspired by popular Anime 'Jujutsu Kaisen'.\nCrafted from high-quality natural wood, this panel is made with a keen attention\nto detail and a passion for the Anime lover world. On our site each and every panel is expertly carved to create\na stunning 3D effect, bringing the Anime characters to life in a whole new way."
+    },
+    {
+      "id": 8,
+      "Photo": "static_pictures/gaara1.jpg",
+      "Name": "Rock lee VS Gaara",
+      "Price": 85,
+      "status": "available",
+      "Details": "Link",
+      "size": "65x70cm",
+      "From": "Naruto",
+      "Materials": "Wood",
+      "Pictures": [
+        "static_pictures/gaara1.jpg",
+        "static_pictures/gaara2.jpg",
+        "static_pictures/gaara3.jpg"
+      ],
+      "Description": "Rock lee VS Gaara - Wooden 3D panel inspired by popular Anime 'Naruto'.\nCrafted from high-quality natural wood, this panel is made with a keen attention\nto detail and a passion for the Anime lover world. On our site each and every panel is expertly carved to create\na stunning 3D effect, bringing the Anime characters to life in a whole new way."
+    },
+    {
+      "id": 9,
+      "Photo": "static_pictures/itachi1.jpg",
+      "Name": "Sasuke & Itachi",
+      "Price": 65,
+      "status": "available",
+      "Details": "Link",
+      "size": "31x43cm",
+      "From": "Naruto",
+      "Materials": "Wood",
+      "Pictures": [
+        "static_pictures/itachi1.jpg",
+        "static_pictures/itachi2.jpg",
+        "static_pictures/itachi3.jpg"
+      ],
+      "Description": "Sasuke & Itachi - Wooden 3D panel inspired by popular Anime 'Naruto'.\nCrafted from high-quality natural wood, this panel is made with a keen attention\nto detail and a passion for the Anime lover world. On our site each and every panel is expertly carved to create\na stunning 3D effect, bringing the Anime characters to life in a whole new way."
+    }
+  ]
+}

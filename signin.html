@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html"><img id="logo" src="static/logo.png" alt="Logo"></a>
+      <div class="company-name">
+        <h1>MangaMoon</h1>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <div class="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-items">
+        <li class="nav-item language-item">
+          <a id="language-link" href="#"><b>English</b></a>
+        </li>       
+        <li class="nav-item">
+          <a href="contact.html"><b>Contact Us</b></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="sign_in_container">
+    <h1 class="sign-in-heading"><b>Sign In</b></h1>
+    <div id="signin-form" method="post" action="#">
+      <div class="form-group">
+        <label for="email"><b>Enter your email:</b></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password"><b>Enter your password:</b></label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <div class="links">
+          <a id="link1" href="registration.html"><b>Create an account</b></a>
+          <a id="link2" href="#"><b>Forgot password?</b></a>
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="sign-in-button" id="sign-in-btn"><b>Sign In</b></button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    let btn = document.getElementById("sign-in-btn")
+    btn.addEventListener('click',function(e){
+      if(validateForm()){
+        window.location.href = "index.html"
+      }
+    });
+
+    let forgotPass = document.getElementById("link2").addEventListener("click",function(e){
+      alert("check your email")
+    })
+
+    function validateForm() {
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      if (email.trim() === "") {
+        alert("Please enter your email.");
+        return false;
+      }
+
+      if (password.trim() === "" || password.trim().length < 6) {
+        alert("Password must be at least 6 characters long");
+        return false;
+      }
+
+      if (!validateEmail(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+      
+      return true;
+    }
+
+    function validateEmail(email) {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }
+  </script>
+
+  <script type="module" src="script.js"></script>
+  <script src="language.js"></script>
+
+</body>
+</html>

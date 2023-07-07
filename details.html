@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Details Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html"><img id="logo" src="static/logo.png" alt="Logo"></a>
+      <div class="company-name">
+        <h1>MangaMoon</h1>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <div class="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-items">
+        <li class="nav-item">
+          <a href="signin.html"><b>Sign in</b></a>
+        </li>
+
+        <li class="nav-item language-item">
+          <a id="language-link" href="#"><b>English</b></a>
+        </li>  
+
+        <li class="nav-item">
+          <a href="contact.html"><b>Contact Us</b></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="details-container" id="details-container">
+    <div class="picture-column" id="picture-column"></div>
+    <div class="info-column" id="info-column"></div>
+  </div>
+
+  <script>
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const itemId = urlParams.get('id');
+
+    const pictureColumn = document.getElementById('picture-column');
+    const infoColumn = document.getElementById('info-column');
+
+    fetch('http://localhost:3000/items/' + itemId)
+      .then(response => response.json())
+      .then(item => {
+
+        item.Pictures.forEach(picture => {
+          const image = document.createElement('img');
+          image.src = picture;
+          pictureColumn.appendChild(image);
+        });
+
+        const nameDiv = document.createElement('div');
+        nameDiv.classList.add('name');
+        nameDiv.textContent = item.Name;
+        infoColumn.appendChild(nameDiv);
+
+        const priceDiv = document.createElement('div');
+        priceDiv.classList.add('price');
+        priceDiv.textContent = `Price: $${item.Price}`;
+        infoColumn.appendChild(priceDiv);
+
+        const statusDiv = document.createElement('div');
+        statusDiv.classList.add('status');
+        statusDiv.textContent = `Status: ${item.status}`;
+        infoColumn.appendChild(statusDiv);
+
+        const sizeDiv = document.createElement('div');
+        sizeDiv.classList.add('size');
+        sizeDiv.textContent = `Size: ${item.size}`;
+        infoColumn.appendChild(sizeDiv);
+
+        const fromDiv = document.createElement('div');
+        fromDiv.classList.add('from');
+        fromDiv.textContent = `From: ${item.From}`;
+        infoColumn.appendChild(fromDiv);
+
+        const materialsDiv = document.createElement('div');
+        materialsDiv.classList.add('materials');
+        materialsDiv.textContent = `Materials: ${item.Materials}`;
+        infoColumn.appendChild(materialsDiv);
+
+        const descriptionDiv = document.createElement('div');
+        descriptionDiv.classList.add('description');
+        descriptionDiv.textContent = item.Description;
+        infoColumn.appendChild(descriptionDiv);
+      })
+      .catch(error => console.error(error));
+  </script>
+
+  <script src="language.js"></script>
+
+</body>
+</html>

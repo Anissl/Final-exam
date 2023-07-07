@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+  <div class="logo">
+    <a href="index.html"><img id="logo" src="static/logo.png" alt="Logo"></a>
+    <div class="company-name">
+      <h1>MangaMoon</h1>
+    </div>
+  </div>
+  <div class="menu-btn">
+    <div class="burger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+  <nav>
+    <ul class="nav-items">
+      <li class="nav-item">
+        <a href="signin.html"><b>Sign in</b></a>
+      </li>
+
+      <li class="nav-item language-item">
+        <a id="language-link" href="#"><b>English</b></a>
+      </li>  
+
+      <li class="nav-item">
+        <a href="contact.html"><b>Contact Us</b></a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+  <div class="items-container" id="items-container"></div>
+
+  <script>
+    const itemsContainer = document.getElementById('items-container');
+
+    fetch('http://localhost:3000/items')
+      .then(response => response.json())
+      .then(items => {
+        items.forEach(item => {
+          const itemDiv = document.createElement('div');
+          itemDiv.classList.add('item');
+
+          const photoDiv = document.createElement('div');
+          photoDiv.classList.add('photo');
+          photoDiv.style.backgroundImage = `url(${item.Photo})`;
+          itemDiv.appendChild(photoDiv);
+
+          const infoDiv = document.createElement('div');
+          infoDiv.classList.add('info');
+
+          const nameDiv = document.createElement('div');
+          nameDiv.classList.add('name');
+          nameDiv.textContent = item.Name;
+          infoDiv.appendChild(nameDiv);
+
+          const priceDiv = document.createElement('div');
+          priceDiv.classList.add('price');
+          priceDiv.textContent = `Price: $${item.Price}`;
+          infoDiv.appendChild(priceDiv);
+
+          const detailsDiv = document.createElement('div');
+          detailsDiv.classList.add('details');
+          const detailsLink = document.createElement('a');
+          detailsLink.href = `details.html?id=${item.id}`;
+          detailsLink.textContent = 'Details';
+          detailsDiv.appendChild(detailsLink);
+          infoDiv.appendChild(detailsDiv);
+
+          itemDiv.appendChild(infoDiv);
+
+          if (item.status === 'available') {
+            itemDiv.classList.add('available');
+          } else {
+            itemDiv.classList.add('unavailable');
+          }
+
+          itemsContainer.appendChild(itemDiv);
+        });
+      })
+      .catch(error => console.error(error));
+  </script>
+
+  <script type="module" src="script.js"></script>
+  <script src="language.js"></script>
+
+</body>
+
+</html>
